@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Cris Garden
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
-    provider: plausible
-  locale: en-US
+    provider: null
+  locale: es-ES
   baseUrl: pevfgbcure.github.io/garden
   ignorePatterns:
     - private
