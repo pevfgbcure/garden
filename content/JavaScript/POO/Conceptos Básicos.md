@@ -95,3 +95,25 @@ Administrador extiende Usuario {
 ```
 
 Esta clase no solo tendrá la propiedad `permisos` y el método `borrarUsuario`, sino que también tendrá acceso a las propiedades y métodos que fueron definidos en la clase `Usuario`. Es decir, podrá acceder a los campos de `usuario`, `contraseña` y `correo`, así como a las funciones de `iniciarSesión` y `enviarMensaje`. La herencia nos ahorra el trabajo de tener que volver a implementar esta funcionalidad en la clase hija.
+
+### Polimorfismo
+
+El polimorfismo, del griego que significa "muchas formas", nos permite que una interfaz, método o símbolo se comporte de manera diferente dependiendo del tipo del objeto o los datos con los que se este tratando. En la práctica esto se suele implementar en las clases hijas, al sobrescribir un método que heredó de la clase padre.
+
+El polimorfismo hace que nuestro código sea más flexible y extensible, pues nos permite agregar nuevas funcionalidades a sistemas existentes sin la necesidad de realizar grandes cambios al código que ya está escrito y probado.
+
+En el siguiente ejemplo, la clase `Administrador` hace uso del polimorfismo, ya que sobrescribe el método `iniciarSesión`, que heredó de la clase `Usuario`, para que requiera como argumentos una serie de `permisos` además de la `contraseña`.
+
+```
+Administrador extiende Usuario {
+	permisos
+	
+	borrarUsuario(nombreDeUsuario) {
+		// Lógica para borrar un usuario.
+	}
+	
+	iniciarSesión(contraseña, permisos) {
+		// Lógica de inicio de sesión.
+	}
+}
+```
